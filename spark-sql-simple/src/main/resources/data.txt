@@ -1,0 +1,9 @@
+1 A A
+2 B A
+3 C A 
+4 D B 
+5 E B 
+6 F B 
+
+Here we also have some kind of very simple word count program in Spark. The word count program is easy.
+Damm I remember how crazy was doing word count in Hadoop. Love Scala for Real! Spark Rocks.
