@@ -2,6 +2,7 @@ package com.github.diegopacheco.spark.simple
 
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext._
 
 object SimpleSparkApp extends App {
   
@@ -10,7 +11,6 @@ object SimpleSparkApp extends App {
   
   val fileLocation = "src/main/resources/data.txt"
   
-  val distFile = sc.textFile(fileLocation)
   val lines = sc.textFile(fileLocation)
   val lineLengths = lines.map(s => s.length)
   val totalLength = lineLengths.reduce((a, b) => a + b)

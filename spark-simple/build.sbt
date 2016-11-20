@@ -13,5 +13,9 @@ libraryDependencies ++= Seq(
   "org.apache.spark" % "spark-sql_2.11" % sparkVersion
 )
 
-scalacOptions += "-feature"
-initialCommands in console := "import scala._"
+lazy val runSpark = taskKey[Unit]("Runs Spark in your machine")
+runSpark := {
+  val s: TaskStreams = streams.value
+  s.log.info("Running apache spark...") 
+  "./run-spark.sh" ! 
+}
