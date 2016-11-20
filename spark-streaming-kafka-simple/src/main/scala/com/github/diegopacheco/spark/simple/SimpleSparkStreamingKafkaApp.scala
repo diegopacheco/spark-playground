@@ -2,7 +2,6 @@ package com.github.diegopacheco.spark.simple
 
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
-import org.apache.spark.SparkContext._
 import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.Seconds
 import org.apache.spark.SparkConf
@@ -37,12 +36,12 @@ object SimpleSparkStreamingKafkaApp extends App {
   
     val words = stream.flatMap( record => record.value.split(" "))
     
-    val wordCounts = words.map(x => (x, 1L))
-                          .reduceByKeyAndWindow(_ + _, _ - _, Minutes(1), Seconds(1), 1)
+    val wordCounts = words.map(x => (x, 1))
+                          .reduceByKey(_ + _)
     
-    
-    println("Kafka Word Count Result")                          
+    println("Kafka Word Count Result: ")
     wordCounts.print()
+    println("END ")
 
     ssc.start()
     ssc.awaitTermination()
