@@ -25,4 +25,6 @@ bin/spark-submit \
     --conf spark.kubernetes.container.image=spark-py:spark \
     --conf spark.kubernetes.authenticate.driver.serviceAccountName=spark \
     local:///opt/spark/examples/jars/spark-examples_2.11-2.4.4.jar
-```    
+```   
+2.4.4 still not work
+https://github.com/kubernetes/kubernetes/issues/82131
