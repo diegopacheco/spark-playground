@@ -17,5 +17,12 @@ seq = words.split()
 data = sc.parallelize(seq)
 counts = data.map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b).collect()
 dict(counts)
-sc.stop()" | kubectl exec $master -it pyspark --namespace=spark
+sc.stop()"
+kubectl exec $master -it pyspark --namespace=spark
+```
+## Check the WebUI for Spark
+```bash
+master=$(kubectl get pods --namespace=spark -l 'component=spark-master' -o jsonpath='{.items[*].metadata.name}')
+kubectl port-forward $master 8080:8080 --namespace=spark
+xdg-open "http://localhost:8080"
 ```
