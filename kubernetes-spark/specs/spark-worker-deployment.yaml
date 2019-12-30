@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spark-worker
-          image: diegopacheco/spark:2.4.4
+          image: diegopacheco/spark:2.2.1
           command: ["/spark-worker"]
           ports:
             - containerPort: 8081
