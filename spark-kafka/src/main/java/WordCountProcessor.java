@@ -30,12 +30,13 @@ public class WordCountProcessor{
         
         System.out.println("Words : " + counts.groupByKey().toString());
 
-        streamingContext.start();
-		try {
-			streamingContext.awaitTermination();
-		} catch (InterruptedException e) {
-			throw new RuntimeException("Error lanching job", e);
-		}
+        try {
+          streamingContext.start();
+          streamingContext.awaitTermination();
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+          throw new RuntimeException("Error lanching job", e);
+        }
 
     }
 }
