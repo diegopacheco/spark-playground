@@ -15,10 +15,10 @@ public class KafkaConsumer {
 
     private static Map<String, Object> kafkaParams = new HashMap<>();
     static {
-		kafkaParams.put("key.deserializer", StringDeserializer.class);
-		kafkaParams.put("value.deserializer", StringDeserializer.class);
-		kafkaParams.put("group.id", "spark_word_count_group");
-		kafkaParams.put("auto.offset.reset", "earliest");
+      kafkaParams.put("key.deserializer", StringDeserializer.class);
+      kafkaParams.put("value.deserializer", StringDeserializer.class);
+      kafkaParams.put("group.id", "spark_word_count_group");
+      kafkaParams.put("auto.offset.reset", "earliest");
     }
 
     public static JavaInputDStream<ConsumerRecord<String, String>> read(
@@ -26,9 +26,9 @@ public class KafkaConsumer {
         SparkConf sparkConf
     ) {
         kafkaParams.put("bootstrap.servers", sparkConf.get("bootstrapServers", "localhost:9092"));
-		JavaInputDStream<ConsumerRecord<String, String>> stream = KafkaUtils.createDirectStream(streamingContext,
+		    JavaInputDStream<ConsumerRecord<String, String>> stream = KafkaUtils.createDirectStream(streamingContext,
 				LocationStrategies.PreferConsistent(),
 				ConsumerStrategies.<String, String>Subscribe(Arrays.asList("word_count_topic"), kafkaParams));
-		return stream;
+		    return stream;
     }
 }

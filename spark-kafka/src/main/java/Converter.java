@@ -1,11 +1,10 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 public class Converter {
-    private static ObjectMapper mapper = new ObjectMapper();
-    
-    public static WordEvent convert(String json) {
+    public static WordEvent convert(String content) {
 		try {
-			return mapper.readValue(json, WordEvent.class);
+			if (content==null){
+				content="";
+			}
+			return new WordEvent(content);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert json to object", e);
 		}
