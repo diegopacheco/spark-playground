@@ -27,8 +27,12 @@ public class WordCountProcessor{
             }
           })
           .reduceByKey((a, b) -> a + b);
-        
-        System.out.println("Words : " + counts.groupByKey().toString());
+
+        counts.foreachRDD( rdd -> {
+          rdd.foreachPartition(events -> {
+            System.out.println(events);
+          });
+        });  
 
         try {
           streamingContext.start();
