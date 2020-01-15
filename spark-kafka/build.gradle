@@ -23,14 +23,22 @@ repositories {
     maven { url 'https://oss.sonatype.org/content/groups/public/' }
 }
 
+jar {
+    manifest {
+        attributes "Main-Class": "Main"
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 dependencies {
   def spark_version = '_2.11:2.4.4'
 
   compile('org.apache.spark:spark-core'+spark_version)
   compile('org.apache.spark:spark-streaming'+spark_version)
   compile('org.apache.spark:spark-streaming-kafka-0-10'+spark_version)
-  compile('org.postgresql:postgresql:42.2.8') 
-  compile('org.apache.commons:commons-dbcp2:2.7.0')
+
   compile('ch.qos.logback:logback-classic:1.0.9')
   compile('ch.qos.logback:logback-core:1.0.9')
 
