@@ -10,7 +10,7 @@ scripts/run-kafka-0.10.sh
 
 ### Create Kafka Topic
 ```
-scripts/create-kafka-topic.sh 
+scripts/create-kafka-topic.sh word_count_topic
 ```
 
 ### Run Spark Job
