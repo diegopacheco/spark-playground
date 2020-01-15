@@ -30,7 +30,7 @@ public class WordCountProcessor{
 
         counts.foreachRDD( rdd -> {
           rdd.foreachPartition(events -> {
-            System.out.println(events);
+            System.out.println("*** Events processed: " + events);
           });
         });  
 

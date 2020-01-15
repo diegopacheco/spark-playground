@@ -17,3 +17,8 @@ scripts/create-kafka-topic.sh word_count_topic
 ```
 scripts/run-spark-job.sh
 ```
+
+### Send Data to kafka
+```
+scripts/send-message-kafka.sh
+```
