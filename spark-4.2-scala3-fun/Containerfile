@@ -1,0 +1,13 @@
+FROM sbtscala/scala-sbt:eclipse-temurin-21.0.11_10_1.12.13_3.8.4 AS build
+WORKDIR /src
+COPY project/build.properties project/plugins.sbt project/
+COPY build.sbt .
+RUN sbt -batch update
+COPY src ./src
+RUN sbt -batch assembly
+
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+COPY --from=build /src/target/scala-3.7.4/spark-42-scala3-fun.jar /app/job.jar
+ENV OUT_PATH=/out/results.json WAREHOUSE_DIR=/tmp/warehouse SPARK_MASTER=local[*]
+CMD ["java","--add-opens=java.base/java.lang=ALL-UNNAMED","--add-opens=java.base/java.lang.invoke=ALL-UNNAMED","--add-opens=java.base/java.nio=ALL-UNNAMED","--add-opens=java.base/java.util=ALL-UNNAMED","--add-opens=java.base/sun.nio.ch=ALL-UNNAMED","-cp","/app/job.jar","Main"]

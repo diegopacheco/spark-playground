@@ -1,0 +1,23 @@
+services:
+  spark-job:
+    build:
+      context: .
+      dockerfile: Containerfile
+    image: spark42-scala3:latest
+    container_name: spark42-scala3-job
+    volumes:
+      - ./out:/out:z
+    environment:
+      OUT_PATH: /out/results.json
+      SPARK_MASTER: local[*]
+
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Containerfile
+    image: spark42-scala3-ui:latest
+    container_name: spark42-scala3-ui
+    ports:
+      - "8173:5173"
+    volumes:
+      - ./out:/app/public/data:z
