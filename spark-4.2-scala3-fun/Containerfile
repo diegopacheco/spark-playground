@@ -1,4 +1,4 @@
-FROM sbtscala/scala-sbt:eclipse-temurin-25.0.3_9_1.12.13_3.3.8 AS build
+FROM sbtscala/scala-sbt:eclipse-temurin-21.0.11_10_1.12.13_3.8.4 AS build
 WORKDIR /src
 COPY project/build.properties project/plugins.sbt project/
 COPY build.sbt .
@@ -6,8 +6,8 @@ RUN sbt -batch update
 COPY src ./src
 RUN sbt -batch assembly
 
-FROM amazoncorretto:25
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /src/target/scala-3.7.4/spark-42-scala3-fun.jar /app/job.jar
 ENV OUT_PATH=/out/results.json WAREHOUSE_DIR=/tmp/warehouse SPARK_MASTER=local[*]
-CMD ["java","--add-modules=jdk.incubator.vector","--add-opens=java.base/java.lang=ALL-UNNAMED","--add-opens=java.base/java.lang.invoke=ALL-UNNAMED","--add-opens=java.base/java.lang.reflect=ALL-UNNAMED","--add-opens=java.base/java.io=ALL-UNNAMED","--add-opens=java.base/java.net=ALL-UNNAMED","--add-opens=java.base/java.nio=ALL-UNNAMED","--add-opens=java.base/java.util=ALL-UNNAMED","--add-opens=java.base/java.util.concurrent=ALL-UNNAMED","--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED","--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED","--add-opens=java.base/sun.nio.ch=ALL-UNNAMED","--add-opens=java.base/sun.nio.cs=ALL-UNNAMED","--add-opens=java.base/sun.security.action=ALL-UNNAMED","--add-opens=java.base/sun.util.calendar=ALL-UNNAMED","--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED","--enable-native-access=ALL-UNNAMED","-cp","/app/job.jar","Main"]
+CMD ["java","--add-opens=java.base/java.lang=ALL-UNNAMED","--add-opens=java.base/java.lang.invoke=ALL-UNNAMED","--add-opens=java.base/java.nio=ALL-UNNAMED","--add-opens=java.base/java.util=ALL-UNNAMED","--add-opens=java.base/sun.nio.ch=ALL-UNNAMED","-cp","/app/job.jar","Main"]
