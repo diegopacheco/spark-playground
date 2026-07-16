@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+ui/node_modules/
+ui/dist/
+ui/public/
+ui/.ui.pid
+out/
+vendor/
