@@ -121,15 +121,10 @@ def sketches(spark):
         "t.item AS item", "t.count AS count"
     )
     exact = spark.sql("SELECT COUNT(DISTINCT product) FROM clicks").collect()[0][0]
-    approx = spark.sql(
+    theta = spark.sql(
         "SELECT theta_sketch_estimate(theta_sketch_agg(product)) FROM clicks"
     ).collect()[0][0]
-    return {
-        "topK": rows(topk),
-        "exactDistinct": exact,
-        "approxDistinct": approx,
-        "approxMethod": "theta_sketch_estimate",
-    }
+    return {"topK": rows(topk), "exactDistinct": exact, "thetaSketchDistinct": theta}
 
 
 def geospatial(spark):

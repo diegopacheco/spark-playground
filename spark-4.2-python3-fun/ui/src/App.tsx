@@ -229,8 +229,8 @@ export default function App() {
               <span className="pair-cap">COUNT(DISTINCT)</span>
             </div>
             <div>
-              <span className="pair-num">{sketches.approxDistinct}</span>
-              <span className="pair-cap">{sketches.approxMethod}</span>
+              <span className="pair-num">{sketches.thetaSketchDistinct}</span>
+              <span className="pair-cap">theta_sketch_estimate</span>
             </div>
           </div>
         </Card>

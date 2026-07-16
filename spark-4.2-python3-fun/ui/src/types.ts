@@ -34,8 +34,7 @@ export type TopKRow = { item: string; count: number };
 export type Sketches = {
   topK: TopKRow[];
   exactDistinct: number;
-  approxDistinct: number;
-  approxMethod: string;
+  thetaSketchDistinct: number;
 };
 
 export type GeoSample = {

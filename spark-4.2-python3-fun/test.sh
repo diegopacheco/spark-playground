@@ -54,7 +54,7 @@ else:
 s = d["sketches"]
 check("approx_top_k heavy hitter", s["topK"][0]["item"], "running shoes")
 check("approx_top_k count", s["topK"][0]["count"], 50)
-check("theta sketch matches exact distinct", s["approxDistinct"], s["exactDistinct"])
+check("theta sketch matches exact distinct", s["thetaSketchDistinct"], s["exactDistinct"])
 
 g = d["geo"]
 check("geometry SRID preserved", g["sample"][0]["srid"], 4326)
