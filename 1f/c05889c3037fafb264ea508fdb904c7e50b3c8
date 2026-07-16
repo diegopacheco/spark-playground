@@ -1,0 +1,23 @@
+spark-4.2-scala3-fun/build.sbt
+  s_12ba97716482ff::t_b146f07954e486 13,16-18,21-29
+spark-4.2-scala3-fun/Containerfile
+  s_12ba97716482ff::t_cd721cc2d56649 1
+  s_12ba97716482ff::t_11d9a67e200544 9
+  s_12ba97716482ff::t_4c26033fc24f4c 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "1fc05889c3037fafb264ea508fdb904c7e50b3c8",
+  "prompts": {},
+  "sessions": {
+    "s_12ba97716482ff": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8a09fd84-d348-4874-971a-5c46920c4903",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "diegopacheco <diego.pacheco.it@gmail.com>"
+    }
+  }
+}
