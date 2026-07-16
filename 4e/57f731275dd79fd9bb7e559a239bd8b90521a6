@@ -1,0 +1,86 @@
+spark-4.2-python3-fun/ui/.dockerignore
+  s_12ba97716482ff::t_65b15b53ec49c2 1-3
+spark-4.2-python3-fun/ui/src/types.ts
+  s_12ba97716482ff::t_8076d039a94cfe 37-38
+  s_12ba97716482ff::t_65b15b53ec49c2 1-36,39-66
+spark-4.2-python3-fun/ui/tsconfig.json
+  s_12ba97716482ff::t_65b15b53ec49c2 1-18
+spark-4.2-python3-fun/fetch-deps.sh
+  s_12ba97716482ff::t_bf305d3d78b775 11
+  s_12ba97716482ff::t_8c54ec11c5967c 23
+  s_12ba97716482ff::t_7be257fdc9d6cc 1-6,8-10,12-22,24-28
+  s_12ba97716482ff::t_f392e37f3d1d75 7
+spark-4.2-python3-fun/ui/src/main.tsx
+  s_12ba97716482ff::t_65b15b53ec49c2 1-10
+spark-4.2-python3-fun/start.sh
+  s_12ba97716482ff::t_fc28cf61598351 14,29
+  s_12ba97716482ff::t_ac333285e79244 1-4,8,10-13,24-28,31
+  s_12ba97716482ff::t_4bc14f9dbbaa58 9
+  s_12ba97716482ff::t_cd80d7c658e8fe 5-7,15-23,30
+spark-4.2-python3-fun/Containerfile
+  s_12ba97716482ff::t_ee3eda278d89b9 3-4
+  s_12ba97716482ff::t_4133727fa55f9d 1-2,5-8
+spark-4.2-python3-fun/ui/index.html
+  s_12ba97716482ff::t_65b15b53ec49c2 1-12
+spark-4.2-python3-fun/ui/src/styles.css
+  s_12ba97716482ff::t_42cba625ada306 2-9,43,45-57,61,63-64,69-82,122,150,188,192,255,262,364
+  s_12ba97716482ff::t_65b15b53ec49c2 1,10-42,44,58-60,62,65-68,83-121,123-149,151-187,189-191,193-254,256-261,263-363,365-387
+spark-4.2-python3-fun/ui/Containerfile
+  s_12ba97716482ff::t_65b15b53ec49c2 1-7
+spark-4.2-python3-fun/.gitignore
+  s_12ba97716482ff::t_fdcbce4f7e32e0 1-7
+  s_12ba97716482ff::t_25a2865bc4d476 8
+spark-4.2-python3-fun/links.sh
+  s_12ba97716482ff::t_c38dd008b8c516 1-10
+spark-4.2-python3-fun/ui/src/flavor.ts
+  s_12ba97716482ff::t_4d272e5072161f 4-5
+  s_12ba97716482ff::t_65b15b53ec49c2 1-3,6-8
+spark-4.2-python3-fun/podman-compose.yml
+  s_12ba97716482ff::t_51cf70518e5984 21
+  s_12ba97716482ff::t_2f8748989c8c94 1-20,22-23
+spark-4.2-python3-fun/app/job.py
+  s_12ba97716482ff::t_92e894a72da55e 1-123,125-126,133-224
+  s_12ba97716482ff::t_d857eb6c01188e 124,127-132
+spark-4.2-python3-fun/test.sh
+  s_12ba97716482ff::t_574dc212cb96cb 1-7,9-56,58-77
+  s_12ba97716482ff::t_1b22615a76146a 57
+  s_12ba97716482ff::t_b7e429217db355 8
+spark-4.2-python3-fun/ui/vite.config.ts
+  s_12ba97716482ff::t_65b15b53ec49c2 1-7
+spark-4.2-python3-fun/README.md
+  s_12ba97716482ff::t_c3fc8067deee3d 80
+  s_12ba97716482ff::t_1b41ee29775196 47
+  s_12ba97716482ff::t_fc9b8ea7bb7f88 151,153
+  s_12ba97716482ff::t_b2189548fefe1f 1-46,48-73,76,78,81-82,84-145,147-150,152,154
+  s_12ba97716482ff::t_658fe0173e3359 146
+  s_12ba97716482ff::t_3f66d7abca2764 74-75,77,79,83
+spark-4.2-python3-fun/ui/src/vite-env.d.ts
+  s_12ba97716482ff::t_65b15b53ec49c2 1
+spark-4.2-python3-fun/stop.sh
+  s_12ba97716482ff::t_65b15b53ec49c2 1-2,4
+  s_12ba97716482ff::t_1032e39261e32a 3
+spark-4.2-python3-fun/ui/src/App.tsx
+  s_12ba97716482ff::t_65b15b53ec49c2 1-71,86-90,92-93,95-96,99,101-231,234-337
+  s_12ba97716482ff::t_42cba625ada306 72-85,91,94,97-98,100
+  s_12ba97716482ff::t_8076d039a94cfe 232-233
+spark-4.2-python3-fun/ui/package.json
+  s_12ba97716482ff::t_65b15b53ec49c2 1-23
+spark-4.2-python3-fun/ui/package-lock.json
+  s_12ba97716482ff::t_52a1429b031d20 1-1335
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "4e57f731275dd79fd9bb7e559a239bd8b90521a6",
+  "prompts": {},
+  "sessions": {
+    "s_12ba97716482ff": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8a09fd84-d348-4874-971a-5c46920c4903",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "diegopacheco <diego.pacheco.it@gmail.com>"
+    }
+  }
+}
