@@ -1,0 +1,27 @@
+spark-4.2-python3-fun/ui/src/types.ts
+  s_12ba97716482ff::t_9c4eca33c85c58 37
+README.md
+  s_12ba97716482ff::t_71ea98de3c83b2 3-9
+spark-4.2-python3-fun/app/job.py
+  s_12ba97716482ff::t_2216bf4354605f 124,127
+spark-4.2-python3-fun/ui/src/App.tsx
+  s_12ba97716482ff::t_9c4eca33c85c58 232-233
+spark-4.2-python3-fun/test.sh
+  s_12ba97716482ff::t_9c4eca33c85c58 57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "449a829606e1987a40a7d2627935e9451023ef58",
+  "prompts": {},
+  "sessions": {
+    "s_12ba97716482ff": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8a09fd84-d348-4874-971a-5c46920c4903",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "diegopacheco <diego.pacheco.it@gmail.com>"
+    }
+  }
+}
